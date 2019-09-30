@@ -1,0 +1,30 @@
+apply plugin: 'java'
+
+group = 'tk.racket.utils'
+version = '0.0.1'
+
+description = """Snowflake"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+dependencies {
+     testCompile 'junit:junit:4.12'
+}
+
+repositories {
+     mavenCentral()
+}
+
+test {
+    useJUnit()
+
+    maxHeapSize = '1G'
+    
+    testLogging {
+        showStandardStreams = true
+    }
+}
