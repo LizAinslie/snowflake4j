@@ -18,9 +18,8 @@ public class SnowflakeGenerator {
     private static final int maxNodeId = (int)(Math.pow(2, NODE_ID_BITS) - 1);
     private static final int maxSequence = (int)(Math.pow(2, SEQUENCE_BITS) - 1);
 
-    // Monday, September 30, 2019 8:28:16 PM
+    // Monday, September 30, 2019 11:14:22 PM
     private static final long EPOCH = 1569885262000L;
-
     
     private final int nodeId;
     private volatile long lastTimestamp = -1L;
