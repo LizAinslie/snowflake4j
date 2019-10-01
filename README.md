@@ -22,3 +22,16 @@ And add this to your dependencies:
 ```
 
 Versions can be found in the releases or at [the Nexus repo](https://nexus.dmrail.games/#browse/browse:maven-public).
+
+## Usage
+Use the `SnowflakeGenerator` class as a singleton, like:
+
+```java
+public class Main {
+	private static SnowflakeGenerator snowflakeGen = new SnowflakeGenerator();
+	
+	public static void main(String[] args) {
+		for (i = 0; i < 10; i++) System.out.println(snowflakeGen.nextId()); // Generates and prints a new snowflake
+	}
+}
+```
